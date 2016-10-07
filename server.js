@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 //function that dictates how to sort the id
 function sortID(a, b) {
         //sort the ids by ascending order
-        return  (a.resource.id) -  parseFloat(b.resource.id);
+        return  parseFloat(a.resource.id) -  parseFloat(b.resource.id);
     }
 
 //receive GET request from anywhere
