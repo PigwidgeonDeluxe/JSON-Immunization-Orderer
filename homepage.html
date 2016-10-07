@@ -1,0 +1,66 @@
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<style type="text/css">
+    body {
+        background-color: #263238;
+        font-family: normal x-small verdana, arial, helvetica, sans-serif;
+        color: #b2ccd6;
+    }
+    
+    h1 {
+        font-family: verdana;
+        font-size: 18;
+        color: #b2ccd6;
+    }
+    
+    input,
+    textarea {
+        padding: 5px;
+        border: solid 1px #dcdcdc;
+        transition: box-shadow 0.3s, border 0.3s;
+        background-color: #263238;
+        color: #89ddff;
+    }
+    
+    input,
+    textarea.focus {
+        border: solid 1px #707070;
+        box-shadow: 0 0 1px 1px #969696;
+    }
+    
+    .button {
+        color: #f07178;
+    }
+    
+</style>
+
+<body>
+    <!--style="color: #ffffff; background-color: #263238"-->
+    <form id="tableForm" action="http://localhost:8081/process_post" method="POST">
+        <center>
+            <table>
+                <tr>
+                    <input type="button" class="button" id="clear_all" name="clear_all" style="height:30px;width:125px" value="Clear">
+                </tr>
+                <tr>
+                    <td><textarea rows="35" cols="125" name="body_json" id="body_json" placeholder="Paste JSON here."></textarea></td>
+                </tr>
+            </table>
+            <!--submit button-->
+            <tr>
+                <td colspan="3"><input type="submit" class="button" style="height:30px;width:125px" value="Submit"></td>
+            </tr>
+        </center>
+    </form>
+</body>
+<script>
+//jQUery script for setting default values when switching from GET to POST and vice versa
+$(document).ready(function() {
+    //clear_all button clears all 
+    $("#clear_all").click(function() {
+        $("#body_json").val("");
+    });
+});
+</script>
+
+</html>
