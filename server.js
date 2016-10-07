@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 //function that dictates how to sort the id
 function sortID(a, b) {
         //sort the ids by ascending order
-        return  parseFloat(a.resource.id) -  parseFloat(b.resource.id);
+        return  (a.resource.id) -  parseFloat(b.resource.id);
     }
 
 //receive GET request from anywhere
@@ -36,7 +36,7 @@ app.post('/process_post', function(req, res) {
     //put the now ordered immunizations back and send the formatted json back
     rawJSON.entry = unformattedEntry;
 
-    res.end(JSON.stringify(rawJSON));
+    res.end(JSON.stringify(rawJSON, null, 4));
 
 })
 
