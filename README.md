@@ -1,5 +1,5 @@
-# JSON-entry.resource.id-Orderer
-Puts the entry.resource.id in ascending order with a given JSON, with a specified format.
+# JSON-Immunization-Orderer
+Puts Immunizations in ascending order with a given JSON, with a specified format.
 
 Prerequisites
 
@@ -21,4 +21,4 @@ Using the Orderer
 4. Start the server with "node server.js".
 5. Go to the address the server is listening on via a web browser.
 6. Copy and Paste your JSON into the text field marked "Paste JSON here."
-7. Click submit. The webapp should return your JSON with the entry.resource.id sorted by ascending order.
+7. Click submit. The webapp should return your JSON with the immunizations sorted by ascending order, first by name then by ID.
