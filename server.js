@@ -22,6 +22,7 @@ app.get('/', function(req, res) {
 })
 
 app.post('/process_post', function(req, res) {
+    // catch any errors caused by improper input JSON formatting
     try {
         //get the unformatted json submitted
         response = {
