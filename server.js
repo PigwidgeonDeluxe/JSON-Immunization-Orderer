@@ -22,21 +22,26 @@ app.get('/', function(req, res) {
 })
 
 app.post('/process_post', function(req, res) {
-    //get the unformatted json submitted
-    response = {
-        body_json: req.body.body_json,
-    }
-    //parse the given json string as a proper json object
-    var rawJSON = JSON.parse(response["body_json"]);
-    //get entry key
-    var unformattedEntry = rawJSON.entry;
-    //sort the unformatted JSON's immunization
-    unformattedEntry.sort(sortID);
-    
-    //put the now ordered immunizations back and send the formatted json back
-    rawJSON.entry = unformattedEntry;
+    try {
+        //get the unformatted json submitted
+        response = {
+            body_json: req.body.body_json,
+        }
+        //parse the given json string as a proper json object
+        var rawJSON = JSON.parse(response["body_json"]);
+        //get entry key
+        var unformattedEntry = rawJSON.entry;
+        //sort the unformatted JSON's immunization
+        unformattedEntry.sort(sortID);
+        
+        //put the now ordered immunizations back and send the formatted json back
+        rawJSON.entry = unformattedEntry;
 
-    res.end(JSON.stringify(rawJSON, null, 4));
+        res.end(JSON.stringify(rawJSON, null, 4));
+    }
+    catch(err) {
+     res.end("An Error occurred. Please check the formatting of the JSON input and ensure that it has the form entry.resource.id.");
+    }
 
 })
 
