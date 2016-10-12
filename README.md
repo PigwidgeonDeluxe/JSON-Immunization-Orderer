@@ -1,4 +1,4 @@
-# JSON-Immunization-Orderer
+# JSON-Immunization-Sorter
 Puts Immunizations in ascending order with a given JSON, with a specified format.
 
 Prerequisites
