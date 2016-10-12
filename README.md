@@ -10,7 +10,7 @@ Prerequisites
 
 Installing
 
-1. Create a directory named jsonorderer_app
+1. Create a directory named jsonsorter_app
 2. Make sure to install all prerequisites first, and download all github files to the directory.
 3. Extract node_modules.zip file to node_modules folder with the folder being in the same directory as server.js
 
