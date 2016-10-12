@@ -14,7 +14,7 @@ Installing
 2. Make sure to install all prerequisites first, and download all github files to the directory.
 3. Extract node_modules.zip file to node_modules folder with the folder being in the same directory as server.js
 
-Using the Orderer
+Using the Sorter
 
 1. Open up bash (Unix) or command prompt (Windows).
 3. Change directory to the location of server.js (ie cd ~/username/myapp/)
